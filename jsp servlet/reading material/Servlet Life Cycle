@@ -1,0 +1,36 @@
+A servlet life cycle can be defined in the following ways 
+
+1. The servlet is initialized by calling the init() method
+2. The servlet calls service() method to process a client's request 
+3. The servlet is terminated by calling the destroy() method
+4 Finally, servlet is garbage collected by the garbage collector 
+
+1. init() Method
+init Method is called only once. It is called only when the servlet is created. It is not called on any user requests 
+
+public void init() throws ServletException{
+	//Initialization code...
+}
+
+2. The service() Method
+The service() method is the main method to perform the actual task. The servlet container calls the service() method to handle requests coming from the client and to write the formatted response back to the client. 
+Each time the server receives a request for a servlet, the server spawns a new thread and calls service. The service() method checks th HTTP type (GET, POST, PUT,DELETE, etc) and calls doGet, doPost, doPut, doDelete etc methods 
+
+public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException{
+}
+
+public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
+	//Servlet Code
+}
+
+public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException , IOException{
+	//Servlet Code
+}
+
+3. destroy() Method
+The destroy() Method is called only once at the end of the life cycle of a servlet. This method gives your servlet a chance to close database connections, halt background threads, etc and perform such cleanup activities. 
+After the destroy() method is called, the servlet object is marked for garbage collection. 
+
+public void destroy(){
+	//Finalization code...
+}
