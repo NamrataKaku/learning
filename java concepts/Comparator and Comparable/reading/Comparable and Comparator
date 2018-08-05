@@ -1,0 +1,24 @@
+##Sorting Logic
+
+#Comparable - Sorting logic (compareTo) function has to be in the same class whose object we need to sort.
+#Comparator - Sorting logic (compare) function can be implemented by another class which implements Comparator Interface
+
+##Implementation
+
+#Comparable - Class whose object needs to be sorted must implement the Comparable Interface.
+#Comparator - Class whose object needs to be sorted must not implement the Comparator Interface. It can be implemented by some other class and can be used to sort it
+
+##Soring Method
+
+#Comparable - It uses this.compareTo(o1) function where this object is compared with the object o1. If the result is positive, this is greater than o1. If the result is zero, both the objects are equal. If the result is negative, then the o1 object is greater than this object.
+#Comparator - It uses compare(o1,o2) function where the objects are compared.  If the result is positive, o1 is greater than o2. If the result is zero, both the objects are equal. If the result is negative, then the o2 object is greater than o1 object.
+
+##Calling Method
+
+#Comparable - Collections.sort(list)
+#Comparator - Collections.sort(list,Comparator)
+
+##Package
+
+#Comparable - java.lang.Comparable
+#Comparator - java.lang.Comparator
