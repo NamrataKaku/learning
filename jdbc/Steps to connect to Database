@@ -1,0 +1,17 @@
+Following are the steps to connect to a Database from a java code
+
+1. Import JDBC packages. - You can either import it manually OR let maven do that for you 
+
+2. Load and Register the JDBC Driver
+
+3. Open a connection to the database 
+
+4. Create a statement object to perform a query
+
+5. Execute the statement object to perform a query 
+
+6. Process the resultset 
+
+7. Close the ResultSet and Statement Objects 
+
+8. Close the Connection object.

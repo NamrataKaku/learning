@@ -1,0 +1,7 @@
+18:56:51	SELECT * FROM depot_master INTO OUTFILE 'test.csv' FIELDS TERMINATED BY ','	Error Code: 1290. The MySQL server is running with the --secure-file-priv option so it cannot execute this statement	0.000 sec
+
+
+%e %m %Y %H %i %s
+
+
+comment this variable(secure-file-priv) in the my.ini file of the mysql 
